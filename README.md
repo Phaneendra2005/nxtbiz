@@ -8,6 +8,40 @@ NxtBiz is a full-stack AI business operations platform that lets internal teams 
 
 ---
 
+## 🌐 Live Demo
+
+| Service | URL |
+|---|---|
+| 🖥️ Frontend (Vercel) | [https://nxtbiz-client.vercel.app](https://nxtbiz-client.vercel.app) |
+| ⚙️ Backend API (Render) | [https://nxtbiz-api.onrender.com](https://nxtbiz-api.onrender.com) |
+| 🏥 API Health Check | [https://nxtbiz-api.onrender.com/health](https://nxtbiz-api.onrender.com/health) |
+
+> **Note:** Backend is hosted on Render free plan. First request may take 30-60 seconds to wake up.
+
+### 🔐 Demo Login
+```
+Email:    admin@nxtbiz.com
+Password: Admin@12345
+Role:     Admin
+```
+
+---
+
+## 📸 Screenshots
+
+| | |
+|---|---|
+| **Login Page** | **Executive Dashboard** |
+| ![Login](screenshots/01-login.png) | ![Dashboard](screenshots/02-dashboard.png) |
+| **Email AI Analysis** | **AI Control Center** |
+| ![Email AI](screenshots/03-email-ai.png) | ![AI Agents](screenshots/04-ai-agents.png) |
+| **Invoice PDF** | **Live Notifications** |
+| ![Invoice](screenshots/05-invoice-pdf.png) | ![Notifications](screenshots/06-notifications.png) |
+| **Workflow Builder** | **Dark Mode** |
+| ![Workflows](screenshots/07-workflows.png) | ![Dark Mode](screenshots/08-dark-mode.png) |
+
+---
+
 ## ✨ Features
 
 - 🔐 **JWT Authentication** with refresh token rotation and HTTP-only cookies
@@ -82,6 +116,7 @@ NxtBiz/
 │   │   └── pdfs/             # Generated PDF files
 │   └── .env                  # Backend environment variables
 │
+├── screenshots/              # README screenshots
 └── README.md
 ```
 
@@ -99,7 +134,7 @@ NxtBiz/
 
 **1. Clone the repository**
 ```bash
-git clone https://github.com/yourusername/nxtbiz.git
+git clone https://github.com/phaneendra2005/nxtbiz.git
 cd nxtbiz
 ```
 
@@ -228,6 +263,7 @@ Socket.IO Notification emitted to all connected clients
 ```
 
 ### Intent Categories
+
 | Intent | Triggered Agent |
 |---|---|
 | `schedule_meeting` | Meeting Agent |
@@ -250,28 +286,25 @@ Root Directory:  server
 Build Command:   npm install
 Start Command:   npm start
 ```
-4. Add environment variables from server/.env
+4. Add all environment variables from server/.env
 5. Set `CLIENT_ORIGIN` to your Vercel frontend URL
+6. Go to MongoDB Atlas → Network Access → Add `0.0.0.0/0`
 
 ### Frontend → Vercel
 
 1. Go to [vercel.com](https://vercel.com) and import your repository
 2. Set these values:
 ```
-Root Directory:   client
 Framework:        Vite
-Build Command:    npm run build
-Output Directory: dist
+Build Command:    npm run build --prefix client
+Output Directory: client/dist
+Install Command:  npm install
 ```
 3. Add environment variables:
 ```
-VITE_API_URL    = https://your-render-app.onrender.com
-VITE_SOCKET_URL = https://your-render-app.onrender.com
+VITE_API_URL    = https://nxtbiz-api.onrender.com
+VITE_SOCKET_URL = https://nxtbiz-api.onrender.com
 ```
-
-### MongoDB Atlas
-- Go to Network Access → Add IP Address
-- Add `0.0.0.0/0` to allow connections from Render
 
 ---
 
@@ -291,29 +324,24 @@ VITE_SOCKET_URL = https://your-render-app.onrender.com
 
 ---
 
-## 📸 Screenshots
-
-| | |
-|---|---|
-| **Login Page** | **Executive Dashboard** |
-| ![Login](screenshots/01-login.png) | ![Dashboard](screenshots/02-dashboard.png) |
-| **Email AI Analysis** | **AI Control Center** |
-| ![Email AI](screenshots/03-email-ai.png) | ![AI Agents](screenshots/04-ai-agents.png) |
-| **Invoice PDF** | **Live Notifications** |
-| ![Invoice](screenshots/05-invoice-pdf.png) | ![Notifications](screenshots/06-notifications.png) |
-| **Workflow Builder** | **Dark Mode** |
-| ![Workflows](screenshots/07-workflows.png) | ![Dark Mode](screenshots/08-dark-mode.png) |
-
----
-
 ## 📄 License
 
-MIT License — Copyright 2024 NxtBiz
+MIT License — Copyright 2026 NxtBiz
 
 ---
 
 ## 👨‍💻 Author
 
-Built with **Spec Driven Development** using **Claude AI**.
+**Phaneendra Kanduri**
 
-> Spec first. Code second. Ship confidently.
+- 🐙 GitHub: [@phaneendra2005](https://github.com/phaneendra2005)
+- 📧 Email: kphaneendra2005@gmail.com
+- 🌐 Live App: [https://nxtbiz-client.vercel.app](https://nxtbiz-client.vercel.app)
+
+---
+
+> Designed and developed using **Spec Driven Development** —
+> a methodology where the full specification is written 
+> before any code is produced.
+>
+> *Spec first. Code second. Ship confidently.* 🚀
