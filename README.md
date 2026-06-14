@@ -293,7 +293,16 @@ VITE_SOCKET_URL = https://your-render-app.onrender.com
 
 ## 📸 Screenshots
 
-> Add your own screenshots in a `/screenshots` folder and link them here.
+| | |
+|---|---|
+| **Login Page** | **Executive Dashboard** |
+| ![Login](screenshots/01-login.png) | ![Dashboard](screenshots/02-dashboard.png) |
+| **Email AI Analysis** | **AI Control Center** |
+| ![Email AI](screenshots/03-email-ai.png) | ![AI Agents](screenshots/04-ai-agents.png) |
+| **Invoice PDF** | **Live Notifications** |
+| ![Invoice](screenshots/05-invoice-pdf.png) | ![Notifications](screenshots/06-notifications.png) |
+| **Workflow Builder** | **Dark Mode** |
+| ![Workflows](screenshots/07-workflows.png) | ![Dark Mode](screenshots/08-dark-mode.png) |
 
 ---
 
